@@ -1,0 +1,2 @@
+# writings.dev
+Educational project
