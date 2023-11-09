@@ -56,38 +56,40 @@ a {
   text-decoration: none;
 }
 
-img {
+img,
+svg {
   max-width: 100%;
   height: auto;
 }
 
 :root {
-  --color-charleston-green: #232830;
-  --color-white: #fff;
-  --color-begonia: #ff7575;
-  --color-dark-liver: #4d4d4d;
-  --color-philippine-gray: #909090;
-  --color-chinese-black: #0F1217;
-  --color-tufts-blue: #4699E0;
-  --font-poppins-400-16: normal 400 1.6rem / normal 'Poppins', sans-serif;
-  --font-poppins-400-24: normal 400 2.4rem / normal 'Poppins', sans-serif;
-  --font-poppins-400-29: normal 400 2.9rem / normal 'Poppins', sans-serif;
-  --font-poppins-400-30: normal 400 3rem / normal 'Poppins', sans-serif;
-  --font-poppins-600-19: normal 600 1.9rem / normal 'Poppins', sans-serif;
-  --font-recursive-400-25: italic 400 2.5rem / normal 'Recursive', sans-serif;
-  --font-recursive-400-27: italic 400 2.7rem / normal 'Recursive', sans-serif;
-  --font-recursive-400-71: italic 400 7.1rem / normal 'Recursive', sans-serif;
-  --font-recursive-700-25: italic 700 2.5rem / normal 'Recursive', sans-serif;
-  --font-source-sans-3-600-19: normal 600 1.9rem / normal 'Source Sans 3', sans-serif;
-  --font-source-sans-3-600-30: normal 600 3rem / normal 'Source Sans 3', sans-serif;
+  --color-main-background: #232830;
+  --color-link: #fff;
+  --color-main-title: #ff7575;
+  --color-line: #4d4d4d;
+  --color-nav-link: #909090;
+  --color-listing-text: #0F1217;
+  --color-social-background: #4699E0;
+  --font-description: normal 400 1.6rem / normal 'Poppins', sans-serif;
+  --font-header-list: normal 400 2.4rem / normal 'Poppins', sans-serif;
+  --font-header-subtitle: normal 400 2.9rem / normal 'Poppins', sans-serif;
+  --font-header-top-name: normal 400 3rem / normal 'Poppins', sans-serif;
+  --font-listing-title: normal 600 1.9rem / normal 'Poppins', sans-serif;
+  --font-main-pagination: italic 400 2.5rem / normal 'Recursive', sans-serif;
+  --font-main-navbar-right: italic 400 2.7rem / normal 'Recursive', sans-serif;
+  --font-header-title: italic 400 7.1rem / normal 'Recursive', sans-serif;
+  --font-two: italic 700 2.5rem / normal 'Recursive', sans-serif;
+  --font-footer-social: normal 600 1.9rem / normal 'Source Sans 3', sans-serif;
+  --font-footer-name: normal 600 3rem / normal 'Source Sans 3', sans-serif;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--color-charleston-green);
+  background-color: var(--color-main-background);
 }
 
 .header {
@@ -113,16 +115,16 @@ body {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: var(--color-white);
+  color: var(--color-link);
   margin-bottom: 3.9rem;
 }
 
 .header-top-name {
-  font: var(--font-poppins-400-30);
+  font: var(--font-header-top-name);
 }
 
 .header-list {
-  font: var(--font-poppins-400-24);
+  font: var(--font-header-list);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -144,7 +146,7 @@ body {
 }
 
 .item-link {
-  color: var(--color-white);
+  color: var(--color-link);
 }
 
 .header-img {
@@ -152,19 +154,19 @@ body {
 }
 
 .header-title {
-  color: var(--color-begonia);
-  font: var(--font-recursive-400-71);
+  color: var(--color-main-title);
+  font: var(--font-header-title);
   margin-bottom: 1.7rem;
 }
 
 .header-subtitle {
-  color: var(--color-white);
-  font: var(--font-poppins-400-29);
+  color: var(--color-link);
+  font: var(--font-header-subtitle);
 }
 
 .line-top {
   border: none;
-  border-top: 0.3rem solid var(--color-dark-liver);
+  border-top: 0.3rem solid var(--color-line);
   opacity: 0.2;
   margin-bottom: 2rem;
 }
@@ -228,7 +230,7 @@ body {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font: var(--font-recursive-400-27);
+  font: var(--font-main-navbar-right);
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -248,7 +250,7 @@ body {
 }
 
 .item-link {
-  color: var(--color-philippine-gray);
+  color: var(--color-nav-link);
 }
 
 .item-position {
@@ -260,16 +262,16 @@ body {
   position: absolute;
   width: 11.6rem;
   height: 3.25rem;
-  background: --webkit-gradient(linear, right top, left top, color-stop(.01%, var(--color-charleston-green)), color-stop(87.5%, rgba(35, 40, 48, .0)));
-  background: -webkit-linear-gradient(right, var(--color-charleston-green) .01%, rgba(35, 40, 48, .0) 87.5%);
-  background: -moz-linear-gradient(right, var(--color-charleston-green) .01%, rgba(35, 40, 48, .0) 87.5%);
-  background: -o-linear-gradient(right, var(--color-charleston-green) .01%, rgba(35, 40, 48, .0) 87.5%);
-  background: linear-gradient(270deg, var(--color-charleston-green) .01%, rgba(35, 40, 48, .0) 87.5%);
+  background: --webkit-gradient(linear, right top, left top, color-stop(.01%, var(--color-main-background)), color-stop(87.5%, rgba(35, 40, 48, .0)));
+  background: -webkit-linear-gradient(right, var(--color-main-background) .01%, rgba(35, 40, 48, .0) 87.5%);
+  background: -moz-linear-gradient(right, var(--color-main-background) .01%, rgba(35, 40, 48, .0) 87.5%);
+  background: -o-linear-gradient(right, var(--color-main-background) .01%, rgba(35, 40, 48, .0) 87.5%);
+  background: linear-gradient(270deg, var(--color-main-background) .01%, rgba(35, 40, 48, .0) 87.5%);
   left: 4.9rem;
 }
 
 .listing {
-  color: var(--color-chinese-black);
+  color: var(--color-listing-text);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -288,7 +290,7 @@ body {
 }
 
 .listing-container {
-  background-color: var(--color-white);
+  background-color: var(--color-link);
   max-width: 39rem;
   -webkit-border-radius: 2.2rem;
   -moz-border-radius: 2.2rem;
@@ -318,12 +320,12 @@ body {
 }
 
 .listing-title {
-  font: var(--font-poppins-600-19);
+  font: var(--font-listing-title);
   margin-bottom: 1.3rem;
 }
 
 .listing-description {
-  font: var(--font-poppins-400-16);
+  font: var(--font-description);
   margin-bottom: 2.4rem;
 }
 
@@ -338,7 +340,7 @@ body {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font: var(--font-poppins-400-16);
+  font: var(--font-description);
 }
 
 .listing-date {
@@ -350,8 +352,8 @@ body {
 }
 
 .main-pagination {
-  color: var(--color-philippine-gray);
-  font: var(--font-recursive-400-25);
+  color: var(--color-nav-link);
+  font: var(--font-main-pagination);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -389,8 +391,8 @@ body {
 }
 
 .two {
-  color: var(--color-begonia);
-  font: var(--font-recursive-700-25);
+  color: var(--color-main-title);
+  font: var(--font-two);
   position: relative;
 }
 
@@ -399,20 +401,20 @@ body {
   position: absolute;
   width: 5.4rem;
   height: .3rem;
-  background-color: var(--color-begonia);
+  background-color: var(--color-main-title);
   right: -23px;
   bottom: 42px;
 }
 
 .line-bottom {
   border: none;
-  border-top: 0.3rem solid var(--color-dark-liver);
+  border-top: 0.3rem solid var(--color-line);
   opacity: 0.2;
   margin-bottom: 3.2rem;
 }
 
 .footer {
-  color: var(--color-white);
+  color: var(--color-link);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -447,15 +449,15 @@ body {
 }
 
 .footer-name {
-  font: var(--font-source-sans-3-600-30);
+  font: var(--font-footer-name);
   margin-right: 1.6rem;
 }
 
 .footer-social {
-  color: var(--color-white);
-  font: var(--font-source-sans-3-600-19);
+  color: var(--color-link);
+  font: var(--font-footer-social);
   padding: .4rem 1.3rem .6rem;
-  background-color: var(--color-tufts-blue);
+  background-color: var(--color-social-background);
   display: block;
   -webkit-border-radius: .5rem;
   -moz-border-radius: .5rem;
@@ -463,10 +465,10 @@ body {
 }
 
 .footer-social-right {
-  color: var(--color-white);
-  font: var(--font-source-sans-3-600-19);
+  color: var(--color-link);
+  font: var(--font-footer-social);
   padding: .4rem 1.3rem .6rem;
-  background-color: var(--color-tufts-blue);
+  background-color: var(--color-social-background);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
